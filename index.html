@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradutor</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Importando Font Awesome -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex items-center justify-center font-sans">
+
+  <div class="bg-white shadow-2xl rounded-xl p-8 w-full max-w-lg">
+    <!-- Título -->
+    <h1 class="text-2xl font-bold text-center text-indigo-600 mb-6 flex items-center justify-center gap-2">
+      🌐 Tradutor Inteligente
+    </h1>
+
+    <!-- Caixa de texto -->
+    <textarea id="pegarTexto" placeholder="Digite o texto aqui..."
+      class="input-texto w-full h-32 p-4 border-2 border-indigo-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 resize-none mb-6"></textarea>
+
+    <!-- Controles -->
+    <div class="flex items-center justify-between mb-6">
+      <select class="idioma border-2 border-indigo-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        <option value="en">Inglês</option>
+        <option value="es">Espanhol</option>
+        <option value="fr">Francês</option>
+        <option value="de">Alemão</option>
+        <option value="it">Italiano</option>
+        <option value="ja">Japonês</option>
+      </select>
+
+      <div class="flex gap-4">
+        <!-- Botão Traduzir -->
+        <button onclick="traduzirTexto()" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+          <i class="fa-solid fa-language"></i>
+          Traduzir
+        </button>
+
+        <!-- Botão Ouvir -->
+        <button onclick="OuvirVoz()" class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition">
+          <i class="fa-solid fa-volume-up"></i>
+          Ouvir
+        </button>
+      </div>
+    </div>
+
+    <!-- Resultado -->
+    <div class="resultado bg-gray-100 p-6 rounded-lg shadow-inner">
+      <h3 class="text-lg font-semibold text-indigo-600 mb-2 flex items-center gap-2">
+        <i class="fa-solid fa-file-lines"></i> Tradução
+      </h3>
+      <p class="title text-gray-700">A tradução aparecerá aqui...</p>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+
+</html>
